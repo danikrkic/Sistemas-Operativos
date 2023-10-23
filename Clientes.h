@@ -3,7 +3,7 @@
 #include <string.h>
 
 typedef struct clavesacceso{
-	char* contraseña;
+	char* contrasena;
 	char* usuario;
 } clavesAcceso;
 
@@ -65,9 +65,9 @@ void obtenerCURP(char* arreglo)
 
 	char CURP[18];
 	puts("ingrese el curp");
-	scanf("%['\n']");
+	scanf("%['\n']",CURP);
 	arreglo = (char*)malloc(sizeof(char)*18);
-	strcopy(arreglo,CURP);
+	strcpy(arreglo,CURP);
 
 
 }
@@ -83,7 +83,7 @@ void obtenerNombre(char* arreglo)
         exit(0);
     }
 	arreglo = (char*)malloc(sizeof(char)*obtenerLongitudCadena(nombre));
-	strcopy(arreglo, nombre);
+	strcpy(arreglo, nombre);
 }
 
 int obtenerEdad()
@@ -100,7 +100,7 @@ int obtenerTelefono()
 	puts("")
 }
 
-void llenarInfoPersonal(I_PERSONAL nuevaInfoPersonal)
+void llenarInfoPersonal(I_PERSONAL nuevoIPersonal)
 {
 	if(nuevoIPersonal == NULL)
 	{
